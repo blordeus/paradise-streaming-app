@@ -15,7 +15,7 @@ function App() {
     <Logo/>
     {/* <Description/> */}
     {/* <MusicPlayer/> */}
-    {/* <Footer/> */}
+    <Footer/>
     </>
   )
 }

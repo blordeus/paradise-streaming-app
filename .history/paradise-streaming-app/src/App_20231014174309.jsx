@@ -1,0 +1,18 @@
+import { useState } from 'react'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+    <G
+      <h1 className='text-6xl'>Paradise Streaming</h1>
+      <p className="text-xl">
+        Do you want to listen to my album early?
+      </p>
+    </>
+  )
+}
+
+export default App
