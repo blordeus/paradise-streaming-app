@@ -1,6 +1,7 @@
 
 export const Header = () => {
-    
+
+    //TODO: create a onHover function that 
   return (
     <>
       <h1 className="text-6xl">Paradise Streaming</h1>

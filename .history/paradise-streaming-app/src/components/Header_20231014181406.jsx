@@ -1,5 +1,7 @@
 
 export const Header = () => {
+
+    //TODO: create a onHover function that constantly changes the color of the h1 element
     
   return (
     <>
