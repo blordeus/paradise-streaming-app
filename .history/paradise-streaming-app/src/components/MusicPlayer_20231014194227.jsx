@@ -1,6 +1,5 @@
 import { Controls } from "./Controls";
 import { DisplayTrack } from "./DisplayTrack";
-import { ProgressBar } from "./ProgressBar";
 
 export const MusicPlayer = () => {
   return (
@@ -8,7 +7,7 @@ export const MusicPlayer = () => {
       <div className="inner">
         <DisplayTrack />
         <Controls/>
-        <ProgressBar/>
+        
       </div>
     </div>
   );
