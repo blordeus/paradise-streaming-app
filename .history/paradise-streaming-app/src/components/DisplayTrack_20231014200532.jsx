@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const DisplayTrack = ({currentTrack}) => {
+export const DisplayTrack = () => {
   return (
     <div>
     <audio src={currentTrack.src} controls />

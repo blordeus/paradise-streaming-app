@@ -1,14 +1,14 @@
 //audio files
 import breatheIn from './src/MP3s/1.-breathe-in-(intro).mp3';
 import checkIn from './src/MP3s/2.-check-in-(v2).mp3';
-import kaleidoscope from './src/MP3s/3.-kaleidoscope-(v2).mp3';
+import kaleidoscope from './src/MP3s/3._-kaleidoscope(v2).mp3';
 import brokenClocks from './src/MP3s/4.-broken clocks-(v2).mp3';
-import safe from './src/MP3s/5.-safe.mp3';
-import wavesComeAndGo from './src/MP3s/6.-waves-come-and-go.mp3';
-import inSearchOf from './src/MP3s/7.-in-search-of-(v2).mp3';
-import paradise from './src/MP3s/8.-paradise-(v4).mp3';
-import intoTheUnknown from './src/MP3s/9.-into-the-unknown-(v4).mp3';
-import breatheOut from './src/MP3s/10.-breathe-out-(outro)-(v2).mp3';
+import safe from './src/MP3s/5._safe.mp3';
+import wavesComeAndGo from './src/MP3s/6._waves_come_and_go.mp3';
+import inSearchOf from './src/MP3s/7._in_search_of_(v2).mp3';
+import paradise from './src/MP3s/8._paradise_(v4).mp3';
+import intoTheUnknown from './src/MP3s/9._into_the_unknown_(v4).mp3';
+import breatheOut from './src/MP3s/10._breathe_out_(outro)_(v2).mp3';
 
 //audio thumbnail
 import  albumCover from './src/assets/Paradise-final-album-cover.png';

@@ -11,7 +11,7 @@ export const MusicPlayer = () => {
   return (
     <div className="audio-player">
       <div className="inner">
-        <DisplayTrack currentTrack={currentTrack}/>
+        <DisplayTrack />
         <Controls/>
         <ProgressBar/>
       </div>

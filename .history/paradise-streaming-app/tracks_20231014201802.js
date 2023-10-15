@@ -1,7 +1,7 @@
 //audio files
 import breatheIn from './src/MP3s/1.-breathe-in-(intro).mp3';
 import checkIn from './src/MP3s/2.-check-in-(v2).mp3';
-import kaleidoscope from './src/MP3s/3.-kaleidoscope-(v2).mp3';
+import kaleidoscope from './src/MP3s/3.-kaleidoscope(v2).mp3';
 import brokenClocks from './src/MP3s/4.-broken clocks-(v2).mp3';
 import safe from './src/MP3s/5.-safe.mp3';
 import wavesComeAndGo from './src/MP3s/6.-waves-come-and-go.mp3';
