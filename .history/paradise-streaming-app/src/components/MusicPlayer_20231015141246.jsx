@@ -6,8 +6,8 @@ import { DisplayTrack } from "./DisplayTrack";
 import { ProgressBar } from "./ProgressBar";
 
 export const MusicPlayer = () => {
-    const [trackIndex, setTrackIndex] = useState(0);
     const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
+    const [trackIndex, setTrackIndex] = useState(0);
 
     const [timeProgress, setTimeProgress] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -20,7 +20,7 @@ export const MusicPlayer = () => {
     <div className="audio-player">
       <div className="inner">
         <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} setDuration={setDuration} progressBarRef={progressBarRef}/>
-        <Controls audioRef={audioRef} progressBarRef={progressBarRef} duration={duration} setTimeProgress={setTimeProgress} tracks={tracks} trackIndex={trackIndex} setTrackIndex={setTrackIndex} setCurrentTrack={setCurrentTrack}/>
+        <Controls audioRef={audioRef} progressBarRef={progressBarRef} duration={duration} setTimeProgress={setTimeProgress}/>
         <ProgressBar progressBarRef={progressBarRef} audioRef={audioRef} timeProgress={timeProgress} duration={duration}/>
       </div>
     </div>

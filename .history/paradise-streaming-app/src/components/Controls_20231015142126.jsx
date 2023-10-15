@@ -16,9 +16,7 @@ export const Controls = ({
   duration,
   setTimeProgress,
   trackIndex,
-  setTrackIndex,
-  tracks,
-  setCurrentTrack
+  setTrackIndex
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 

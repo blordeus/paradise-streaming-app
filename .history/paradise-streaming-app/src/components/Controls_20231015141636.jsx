@@ -15,10 +15,10 @@ export const Controls = ({
   progressBarRef,
   duration,
   setTimeProgress,
+  tracks,
   trackIndex,
   setTrackIndex,
-  tracks,
-  setCurrentTrack
+  setCurrentTrack,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 

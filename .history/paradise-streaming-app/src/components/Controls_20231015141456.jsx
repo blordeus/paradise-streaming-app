@@ -15,10 +15,10 @@ export const Controls = ({
   progressBarRef,
   duration,
   setTimeProgress,
+  tracks,
   trackIndex,
   setTrackIndex,
-  tracks,
-  setCurrentTrack
+  setCurrentTrack,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -80,12 +80,6 @@ export const Controls = ({
     playAnimationRef.current = requestAnimationFrame(repeat);
   }, [isPlaying, audioRef, repeat]);
 
-  useEffect(() => {
-    if (audioRef) {
-      audioRef.current.volume = volume / 100;
-    }
-  }, [volume, audioRef]);
-
   return (
     <div className="controls-wrapper">
       <div className="controls">
@@ -111,16 +105,12 @@ export const Controls = ({
         <div className="volume">
           <button>icons</button>
           <input
-            type="range"
-            min={0}
-            max={100}
-            value={volume}
-            onChange={(e) => setVolume(e.target.value)}
-            style={{
-              background: `linear-gradient(to right, #f50 ${volume}%, #ccc ${volume}%)`,
-            }}
-          />{" "}
-        </div>
+  type="range"
+  min={0}
+  max={100}
+  value={volume}
+  onChange={(e) => setVolume(e.target.value)}
+/>        </div>
       </div>
     </div>
   );

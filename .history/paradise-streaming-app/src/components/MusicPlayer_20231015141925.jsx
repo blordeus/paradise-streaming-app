@@ -8,6 +8,7 @@ import { ProgressBar } from "./ProgressBar";
 export const MusicPlayer = () => {
     const [trackIndex, setTrackIndex] = useState(0);
     const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
+    
 
     const [timeProgress, setTimeProgress] = useState(0);
     const [duration, setDuration] = useState(0);
