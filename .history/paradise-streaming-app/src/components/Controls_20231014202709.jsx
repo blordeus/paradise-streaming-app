@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // icons
 import {
@@ -16,14 +16,6 @@ export const Controls = ({audioRef}) => {
     const togglePlayPause = () => {
         setIsPlaying((prev) => !prev);
       };
-
-      useEffect(() => {
-        if (isPlaying) {
-          audioRef.current.play();
-        } else {
-          audioRef.current.pause();
-        }
-      }, [isPlaying, audioRef]);
 
   return (
 <div className="controls-wrapper">
