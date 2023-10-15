@@ -10,12 +10,6 @@ import {
   IoPauseSharp,
 } from "react-icons/io5";
 
-import {
-    IoMdVolumeHigh,
-    IoMdVolumeOff,
-    IoMdVolumeLow,
-  } from 'react-icons/io';
-
 export const Controls = ({
   audioRef,
   progressBarRef,
@@ -24,8 +18,7 @@ export const Controls = ({
   trackIndex,
   setTrackIndex,
   tracks,
-  setCurrentTrack,
-  handleNext
+  setCurrentTrack
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -70,6 +63,15 @@ export const Controls = ({
     }
   };
 
+  const handleNext = () => {
+    if (trackIndex >= tracks.length - 1) {
+      setTrackIndex(0);
+      setCurrentTrack(tracks[0]);
+    } else {
+      setTrackIndex((prev) => prev + 1);
+      setCurrentTrack(tracks[trackIndex + 1]);
+    }
+  };
 
   useEffect(() => {
     if (isPlaying) {
@@ -83,9 +85,8 @@ export const Controls = ({
   useEffect(() => {
     if (audioRef) {
       audioRef.current.volume = volume / 100;
-      audioRef.current.muted = muteVolume;
     }
-  }, [volume, audioRef, muteVolume]);
+  }, [volume, audioRef]);
 
   return (
     <div className="controls-wrapper">
@@ -110,16 +111,15 @@ export const Controls = ({
       <div className="controls-wrapper">
         <div className="controls">{/* ... */}</div>
         <div className="volume">
-          <button onClick={() => setMuteVolume((prev) => !prev)}>
-            {muteVolume || volume < 5 ? (
-              <IoMdVolumeOff />
-            ) : volume < 40 ? (
-              <IoMdVolumeLow />
-            ) : (
-              <IoMdVolumeHigh />
-            )}
-          </button>{" "}
-          <input
+        <button onClick={() => setMuteVolume((prev) => !prev)}>
+  {muteVolume || volume < 5 ? (
+    <IoMdVolumeOff />
+  ) : volume < 40 ? (
+    <IoMdVolumeLow />
+  ) : (
+    <IoMdVolumeHigh />
+  )}
+</button>          <input
             type="range"
             min={0}
             max={100}

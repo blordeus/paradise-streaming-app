@@ -1,7 +1,7 @@
 import { BsMusicNoteBeamed } from 'react-icons/bs';
 import { TrackList } from './TrackList';
 
-export const DisplayTrack = ({currentTrack, setDuration, progressBarRef, audioRef, handleNext}) => {
+export const DisplayTrack = ({currentTrack, setDuration, progressBarRef, audioRef}) => {
 
     const onLoadedMetadata = () => {
         const seconds = audioRef.current.duration;
@@ -11,7 +11,7 @@ export const DisplayTrack = ({currentTrack, setDuration, progressBarRef, audioRe
     
   return (
     <div>
-      <audio src={currentTrack.src} ref={audioRef} onLoadedMetadata={onLoadedMetadata} onEnded={handleNext}/>
+      <audio src={currentTrack.src} ref={audioRef} onLoadedMetadata={onLoadedMetadata} onEn/>
       <div className="audio-info">
         <div className="audio-image">
           {currentTrack.thumbnail ? (

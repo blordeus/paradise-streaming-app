@@ -15,23 +15,14 @@ export const MusicPlayer = () => {
     const audioRef = useRef();
     const progressBarRef = useRef();
 
-    const handleNext = () => {
-        if (trackIndex >= tracks.length - 1) {
-          setTrackIndex(0);
-          setCurrentTrack(tracks[0]);
-        } else {
-          setTrackIndex((prev) => prev + 1);
-          setCurrentTrack(tracks[trackIndex + 1]);
-        }
-      };
     
 
 
   return (
     <div className="audio-player">
       <div className="inner">
-        <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} setDuration={setDuration} progressBarRef={progressBarRef} handleNext={handleNext}/>
-        <Controls audioRef={audioRef} progressBarRef={progressBarRef} duration={duration} setTimeProgress={setTimeProgress} tracks={tracks} trackIndex={trackIndex} setTrackIndex={setTrackIndex} setCurrentTrack={setCurrentTrack} handleNext={handleNext}/>
+        <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} setDuration={setDuration} progressBarRef={progressBarRef}/>
+        <Controls audioRef={audioRef} progressBarRef={progressBarRef} duration={duration} setTimeProgress={setTimeProgress} tracks={tracks} trackIndex={trackIndex} setTrackIndex={setTrackIndex} setCurrentTrack={setCurrentTrack}/>
         <ProgressBar progressBarRef={progressBarRef} audioRef={audioRef} timeProgress={timeProgress} duration={duration}/>
       </div>
     </div>

@@ -25,7 +25,6 @@ export const Controls = ({
   setTrackIndex,
   tracks,
   setCurrentTrack,
-  handleNext
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -70,6 +69,15 @@ export const Controls = ({
     }
   };
 
+  const handleNext = () => {
+    if (trackIndex >= tracks.length - 1) {
+      setTrackIndex(0);
+      setCurrentTrack(tracks[0]);
+    } else {
+      setTrackIndex((prev) => prev + 1);
+      setCurrentTrack(tracks[trackIndex + 1]);
+    }
+  };
 
   useEffect(() => {
     if (isPlaying) {
