@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-    <div className='space-y-6'>
+    <div className='space-y-8'>
       <Header/>
       <Logo/>
       <Description/>

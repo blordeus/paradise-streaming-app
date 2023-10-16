@@ -2,8 +2,8 @@
 
 export const Footer = () => {
   return (
-    <div className='mt-12'>
-      <p className="text-2xl mt-24 mb-8">
+    <div className='mt-24'>
+      <p className="text-2xl">
         Hope you enjoyed your stay here at Paradise. Grab a souvenir on your way out and I look forward to seeing you again.
       </p>
       <a href="https://distrokid.com/hyperfollow/bryanlordeus/paradise">
